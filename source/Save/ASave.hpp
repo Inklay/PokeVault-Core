@@ -8,9 +8,11 @@ class ASave {
 public:
     ASave(void);
     enum class Game {
-        DIAMOND,
-        PEARL,
-        PLATINUM
+        SOULSILVER,
+        HEARTGOLD,
+        PLATINUM,
+        PEALR,
+        DIAMOND
     };
     std::string &get_username(void);
     uint16_t get_trainer_id(void);
