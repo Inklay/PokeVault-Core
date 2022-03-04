@@ -11,7 +11,7 @@ public:
         SOULSILVER,
         HEARTGOLD,
         PLATINUM,
-        PEALR,
+        PEARL,
         DIAMOND
     };
     std::string &get_username(void);
