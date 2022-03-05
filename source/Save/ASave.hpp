@@ -14,10 +14,11 @@ public:
         PEARL,
         DIAMOND
     };
-    std::string &get_username(void);
+    std::string get_username(void);
     uint16_t get_trainer_id(void);
     virtual void load(void) = 0;
     virtual void init(std::string& path) = 0;
+    std::string get_game_time(void);
 
 protected:
     std::vector<char> open_file(std::string& path);
@@ -26,7 +27,6 @@ protected:
     uint16_t m_trainer_id;
     uint16_t m_hours;
     uint8_t m_minutes;
-    uint8_t m_seconds;
     Game m_game;
 };
 

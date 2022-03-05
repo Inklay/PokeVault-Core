@@ -23,8 +23,6 @@ void ASave4::get_general_data(std::vector<char> data) {
         data, 0x86, 0x87));
     m_minutes = utils::value_from_vector<uint8_t>(utils::slice<char>(
         data, 0x88, 0x88));
-    m_seconds = utils::value_from_vector<uint8_t>(utils::slice<char>(
-        data, 0x89, 0x89));
     m_username = utils::gen4::data_to_string(utils::slice<char>(data, 0x68, 0x77));
 }
 

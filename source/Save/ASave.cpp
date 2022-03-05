@@ -21,7 +21,11 @@ std::vector<char> ASave::open_file(std::string& path) {
     throw std::runtime_error("File does not exist");
 }
 
-std::string &ASave::get_username() {
+std::string ASave::get_game_time(void) {
+    return std::to_string(m_hours) + ":" + std::to_string(m_minutes);
+}
+
+std::string ASave::get_username(void) {
 	return m_username;
 }
 
