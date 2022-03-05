@@ -20,9 +20,10 @@ void ASave4::get_general_data(std::vector<char> data) {
     m_trainer_id = utils::value_from_vector<uint16_t>(utils::slice<char>(
         data, 0x78, 0x79));
     m_hours = utils::value_from_vector<uint16_t>(utils::slice<char>(
-        data, 0x86, 0x87));
+        data, 0x8A, 0x8B));
     m_minutes = utils::value_from_vector<uint8_t>(utils::slice<char>(
-        data, 0x88, 0x88));
+        data, 0x8C, 0x8C));
+    std::cout << m_hours << std::endl;
     m_username = utils::gen4::data_to_string(utils::slice<char>(data, 0x68, 0x77));
 }
 
