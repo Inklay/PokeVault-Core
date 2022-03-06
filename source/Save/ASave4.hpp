@@ -23,10 +23,10 @@ protected:
     int m_storage_off;
     int m_storage_size;
     int m_pokedex_off;
-    const int m_pokedex_region_size = 0x40;
+    const size_t m_pokedex_region_size = 0x40;
     const int m_pair_off = 0x40000;
     const int m_footer_size = 0x14;
-    const int m_max_dex_number = 493;
+    const size_t m_max_dex_number = 493;
     int m_general_pair;
     int m_storage_pair;
     Footer4 m_general_footer;
