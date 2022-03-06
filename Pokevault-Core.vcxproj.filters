@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\Save\Block\Box4.cpp">
+    <ClCompile Include="source\Save\Box\Box4.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="source\Save\Block\Footer4.cpp">
@@ -27,7 +27,7 @@
     <ClCompile Include="source\Save\Game\SavePL.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="source\Save\Pkm\APokemon.cpp">
+    <ClCompile Include="source\Save\Pkm\Base_Pokemon.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="source\Save\Pkm\Pk4.cpp">
@@ -48,9 +48,12 @@
     <ClCompile Include="source\main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="source\Save\Box\Base_Box.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\Save\Block\Box4.hpp">
+    <ClInclude Include="source\Save\Box\Box4.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="source\Save\Block\Footer4.hpp">
@@ -62,7 +65,7 @@
     <ClInclude Include="source\Save\Game\SavePL.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="source\Save\Pkm\APokemon.hpp">
+    <ClInclude Include="source\Save\Pkm\Base_Pokemon.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="source\Save\Pkm\Pk4.hpp">
@@ -78,6 +81,9 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="source\utils\utils4.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Save\Box\Base_Box.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

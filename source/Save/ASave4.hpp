@@ -11,6 +11,8 @@ class ASave4 : public ASave {
 public:
     ASave4(void);
     void load(void);
+    Base_Box& get_current_box(void);
+    Base_Box& get_box(int idx);
 
 protected:
     int compare_save_count(uint32_t first_block, uint32_t second_bloc);

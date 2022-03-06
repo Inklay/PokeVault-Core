@@ -1,12 +1,12 @@
-#ifndef PK4
-#define PK4
+#ifndef PK4_HPP
+#define PK4_HPP
 
 #include <vector>
 #include <utility>
 #include <array>
-#include "./APokemon.hpp"
+#include "./Base_Pokemon.hpp"
 
-class Pk4 : APokemon {
+class Pk4 : public Base_Pokemon {
 public:
 	void init(std::vector<char> data);
 	void decrypt(std::vector<char> data);
@@ -21,4 +21,4 @@ private:
 	static const std::array<std::array<uint8_t, 4>, 24> unshuffle_block_order;
 };
 
-#endif // !PK4
+#endif // !PK4_HPP

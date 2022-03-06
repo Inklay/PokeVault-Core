@@ -1,9 +1,9 @@
-#ifndef APOKEMON
-#define APOKEMON
+#ifndef BASE_POKEMON
+#define BASE_POKEMON
 
 #include <string>
 
-class APokemon {
+class Base_Pokemon {
 public:
 	uint32_t get_PID();
 	uint16_t get_dex_number();
@@ -15,4 +15,4 @@ protected:
 	std::string m_name;
 };
 
-#endif // !APOKMEON
+#endif // !BASE_POKEMON

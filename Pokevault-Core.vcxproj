@@ -142,11 +142,12 @@
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\Save\ASave.cpp" />
     <ClCompile Include="source\Save\ASave4.cpp" />
-    <ClCompile Include="source\Save\Block\Box4.cpp" />
+    <ClCompile Include="source\Save\Box\Base_Box.cpp" />
+    <ClCompile Include="source\Save\Box\Box4.cpp" />
     <ClCompile Include="source\Save\Block\Footer4.cpp" />
     <ClCompile Include="source\Save\Block\Storage4.cpp" />
     <ClCompile Include="source\Save\Game\SavePL.cpp" />
-    <ClCompile Include="source\Save\Pkm\APokemon.cpp" />
+    <ClCompile Include="source\Save\Pkm\Base_Pokemon.cpp" />
     <ClCompile Include="source\Save\Pkm\Pk4.cpp" />
     <ClCompile Include="source\utils\utils.cpp" />
     <ClCompile Include="source\utils\utils4.cpp" />
@@ -154,11 +155,12 @@
   <ItemGroup>
     <ClInclude Include="source\Save\ASave.hpp" />
     <ClInclude Include="source\Save\ASave4.hpp" />
-    <ClInclude Include="source\Save\Block\Box4.hpp" />
+    <ClInclude Include="source\Save\Box\Base_Box.hpp" />
+    <ClInclude Include="source\Save\Box\Box4.hpp" />
     <ClInclude Include="source\Save\Block\Footer4.hpp" />
     <ClInclude Include="source\Save\Block\Storage4.hpp" />
     <ClInclude Include="source\Save\Game\SavePL.hpp" />
-    <ClInclude Include="source\Save\Pkm\APokemon.hpp" />
+    <ClInclude Include="source\Save\Pkm\Base_Pokemon.hpp" />
     <ClInclude Include="source\Save\Pkm\Pk4.hpp" />
     <ClInclude Include="source\utils\utils.hpp" />
     <ClInclude Include="source\utils\utils4.hpp" />

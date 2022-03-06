@@ -8,6 +8,14 @@
 
 ASave4::ASave4(void) {}
 
+Base_Box& ASave4::get_current_box(void) {
+    return m_storage.get_current_box();
+}
+
+Base_Box& ASave4::get_box(int idx) {
+    return m_storage.get_box(idx);
+}
+
 void ASave4::init(std::string& path) {
     std::vector<char> data = open_file(path);
     get_general_footer(data);

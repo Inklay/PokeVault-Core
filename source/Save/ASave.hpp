@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include "./Box/Base_Box.hpp"
 
 class ASave {
 public:
@@ -20,6 +21,8 @@ public:
     virtual void load(void) = 0;
     virtual void init(std::string& path) = 0;
     std::string get_game_time(void);
+    virtual Base_Box& get_current_box(void) = 0;
+    virtual Base_Box& get_box(int idx) = 0;
 
 protected:
     std::vector<char> open_file(std::string& path);
