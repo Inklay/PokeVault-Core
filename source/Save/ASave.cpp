@@ -32,3 +32,7 @@ std::string ASave::get_username(void) {
 uint16_t ASave::get_trainer_id(void) {
     return m_trainer_id;
 }
+
+int ASave::get_pokemon_caught(void) {
+    return m_pokemon_caught;
+}

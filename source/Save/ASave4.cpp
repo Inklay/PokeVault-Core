@@ -23,8 +23,14 @@ void ASave4::get_general_data(std::vector<char> data) {
         data, 0x8A, 0x8B));
     m_minutes = utils::value_from_vector<uint8_t>(utils::slice<char>(
         data, 0x8C, 0x8C));
-    std::cout << m_hours << std::endl;
     m_username = utils::gen4::data_to_string(utils::slice<char>(data, 0x68, 0x77));
+    m_pokemon_caught = 0;
+    for (size_t byte = 0; byte < m_pokedex_region_size; byte++) {
+        for (size_t bit = 0; bit < 8; bit++) {
+            if (byte * 8 + bit < m_max_dex_number)
+                m_pokemon_caught += (data.at(m_pokedex_off + 4 + byte) >> bit) & 1;
+        }
+    }
 }
 
 int ASave4::compare_save_count(uint32_t first_block, uint32_t second_block)
