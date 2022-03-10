@@ -12,8 +12,18 @@ Base_Box& ASave4::get_current_box(void) {
     return m_storage.get_current_box();
 }
 
-Base_Box& ASave4::get_box(int idx) {
-    return m_storage.get_box(idx);
+Base_Box& ASave4::next_box(int idx) {
+    if (idx == 17)
+        idx = 0;
+    m_storage.set_current_box(idx);
+    return m_storage.get_current_box();
+}
+
+Base_Box& ASave4::prev_box(int idx) {
+    if (idx == 0)
+        idx = 17;
+    m_storage.set_current_box(idx);
+    return m_storage.get_current_box();
 }
 
 void ASave4::init(std::string& path) {

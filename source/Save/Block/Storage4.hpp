@@ -7,7 +7,7 @@ class Storage4 {
 public:
 	void init(std::vector<char> data);
 	Base_Box& get_current_box(void);
-	Base_Box& get_box(int idx);
+	void set_current_box(int idx);
 
 protected:
 	uint32_t m_current_box;

@@ -18,6 +18,6 @@ Base_Box& Storage4::get_current_box(void) {
 	return static_cast<Base_Box&>(m_boxes[m_current_box]);
 }
 
-Base_Box& Storage4::get_box(int idx) {
-	return static_cast<Base_Box&>(m_boxes[idx]);
+void Storage4::set_current_box(int idx) {
+	m_current_box = idx;
 }
