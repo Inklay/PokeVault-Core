@@ -8,6 +8,10 @@
 
 ASave4::ASave4(void) {}
 
+Base_Pokemon& ASave4::get_pokemon_at(int idx) {
+    return m_storage.get_current_box().get_pokemon_at(idx);
+}
+
 Base_Box& ASave4::get_current_box(void) {
     return m_storage.get_current_box();
 }

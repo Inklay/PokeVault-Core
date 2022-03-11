@@ -24,6 +24,7 @@ public:
     virtual Base_Box& get_current_box(void) = 0;
     virtual Base_Box& next_box(int idx) = 0;
     virtual Base_Box& prev_box(int idx) = 0;
+    virtual Base_Pokemon& get_pokemon_at(int idx) = 0;
 
 protected:
     std::vector<char> open_file(std::string& path);
