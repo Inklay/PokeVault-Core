@@ -22,8 +22,8 @@ public:
     virtual void init(std::string& path) = 0;
     std::string get_game_time(void);
     virtual Base_Box& get_current_box(void) = 0;
-    virtual Base_Box& next_box(int idx) = 0;
-    virtual Base_Box& prev_box(int idx) = 0;
+    virtual Base_Box& next_box(void) = 0;
+    virtual Base_Box& prev_box(void) = 0;
     virtual Base_Pokemon& get_pokemon_at(int idx) = 0;
 
 protected:

@@ -3,6 +3,7 @@
 #include "../../utils/utils4.hpp"
 
 void Pk4::init(std::vector<char> data) {
+	
 	m_PID = utils::value_from_vector<uint32_t>(utils::slice<char>(
 		data, 0x00, 0x03));
 	if (m_PID == 0)

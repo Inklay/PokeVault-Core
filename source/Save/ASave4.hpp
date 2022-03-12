@@ -12,8 +12,8 @@ public:
     ASave4(void);
     void load(void);
     Base_Box& get_current_box(void);
-    Base_Box& next_box(int idx);
-    Base_Box& prev_box(int idx);
+    Base_Box& next_box(void);
+    Base_Box& prev_box(void);
     Base_Pokemon& get_pokemon_at(int idx);
 
 protected:
