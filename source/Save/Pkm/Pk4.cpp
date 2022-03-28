@@ -35,6 +35,14 @@ void Pk4::read_data(std::array<uint8_t, 4> block_order, std::vector<char> data) 
 	m_dex_number = utils::value_from_vector<uint16_t>(utils::slice<char>(
 		block_a, 0, 1));
 	m_name = utils::gen4::data_to_string(utils::slice<char>(block_c, 0, 0x16));
+	uint8_t forms = utils::value_from_vector<uint8_t>(utils::slice(block_b, 0x18, 0x18));
+	bool genderless = (forms & (1 << 2));
+	if (forms & (1 << 1))
+		m_gender = Gender::FEMALE;
+	else if (forms & (1 << 2))
+		m_gender = Gender::GENDERLESS;
+	else
+		m_gender = Gender::MALE;
 }
 
 #ifndef PK4_TABLES

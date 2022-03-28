@@ -22,3 +22,7 @@ std::string Base_Pokemon::get_sprite(void) {
 	ss << m_dex_number;
 	return ss.str();
 }
+
+Base_Pokemon::Gender Base_Pokemon::get_gender(void) {
+	return m_gender;
+}
