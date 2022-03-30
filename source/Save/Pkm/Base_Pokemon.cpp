@@ -20,6 +20,8 @@ std::string Base_Pokemon::get_sprite(void) {
 	else if (m_dex_number < 100)
 		ss << "0";
 	ss << m_dex_number;
+	if (m_alternate_form != "")
+		ss << "-" << m_alternate_form;
 	return ss.str();
 }
 

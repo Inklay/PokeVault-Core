@@ -18,6 +18,7 @@ public:
 	Gender get_gender(void);
 
 protected:
+	std::string m_alternate_form;
 	uint32_t m_PID;
 	uint16_t m_dex_number;
 	std::string m_name;

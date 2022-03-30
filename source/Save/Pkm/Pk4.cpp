@@ -36,17 +36,86 @@ void Pk4::read_data(std::array<uint8_t, 4> block_order, std::vector<char> data) 
 		block_a, 0, 1));
 	m_name = utils::gen4::data_to_string(utils::slice<char>(block_c, 0, 0x16));
 	uint8_t forms = utils::value_from_vector<uint8_t>(utils::slice(block_b, 0x18, 0x18));
-	bool genderless = (forms & (1 << 2));
 	if (forms & (1 << 1))
 		m_gender = Gender::FEMALE;
 	else if (forms & (1 << 2))
 		m_gender = Gender::GENDERLESS;
 	else
 		m_gender = Gender::MALE;
+	get_alternate_forms(forms & (31 << 3));
+}
+
+void Pk4::get_alternate_forms(uint8_t form) {
+	form /= 8;
+	switch (m_dex_number) {
+		case 201:
+			m_alternate_form = Pk4::unown_forms.at(form);
+			return;
+		case 386:
+			m_alternate_form = Pk4::deoxys_forms.at(form);
+			return;
+		case 412:
+		case 413:
+			m_alternate_form = Pk4::burmy_wormadam_forms.at(form);
+			return;
+		case 422:
+		case 423:
+			m_alternate_form = Pk4::shellos_gastrodon_forms.at(form);
+			return;
+		case 479:
+			m_alternate_form = Pk4::rotom_forms.at(form);
+			return;
+		case 487:
+			m_alternate_form = Pk4::giratina_forms.at(form);
+			return;
+		case 492:
+			m_alternate_form = Pk4::shaymin_forms.at(form);
+			return;
+		case 493:
+			m_alternate_form = Pk4::arceus_forms.at(form);
+			return;
+		default:
+			m_alternate_form = "";
+			return;
+	}
 }
 
 #ifndef PK4_TABLES
 #define PK4_TABLES
+
+const std::array<std::string, 28> Pk4::unown_forms = {{
+	"", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
+	"o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "exclamation", "question"
+}};
+
+const std::array<std::string, 4> Pk4::deoxys_forms = {{
+	"", "attack", "defense", "speed"
+}};
+
+const std::array<std::string, 3> Pk4::burmy_wormadam_forms = {{
+	"", "sandy", "trash"
+}};
+
+const std::array<std::string, 2> Pk4::shellos_gastrodon_forms = {{
+	"", "east"
+}};
+
+const std::array<std::string, 6> Pk4::rotom_forms = {{
+	"", "heat", "wash", "frost", "fan", "cut"
+}};
+
+const std::array<std::string, 2> Pk4::giratina_forms = {{
+	"", "origin"
+}};
+
+const std::array<std::string, 2> Pk4::shaymin_forms = {{
+	"", "sky"
+}};
+
+const std::array<std::string, 17> Pk4::arceus_forms = {{
+	"", "fist", "sky", "toxic", "earth", "stone", "insect", "spooky", "iron",
+	"flame", "splash", "meadow", "zap", "mind", "icicle", "draco", "dread"
+}};
 
 namespace block_offset {
 	uint8_t A = 0;
