@@ -101,7 +101,7 @@ const std::array<std::string, 2> Pk4::shellos_gastrodon_forms = {{
 }};
 
 const std::array<std::string, 6> Pk4::rotom_forms = {{
-	"", "heat", "wash", "frost", "fan", "cut"
+	"", "heat", "wash", "frost", "fan", "mow"
 }};
 
 const std::array<std::string, 2> Pk4::giratina_forms = {{
